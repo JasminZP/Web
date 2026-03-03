@@ -1,0 +1,31 @@
+p {
+    line-height: 1.7em;
+    font-size: 90%;
+}
+html, body {
+    background: lightgreen;
+    font-family: 'Montserrat', sans-serif;
+    word-spacing: 0.6em;
+
+}
+h4 {
+    color: #575c63;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 120%;
+}
+ul {
+    line-height: 1.8em;
+    color: #061e36;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: -2px 0 #0d345c, 0 1px #0d345c;
+    background: #47535e;
+}
+blockquote {
+    color: #061e36;
+}
+img {
+    max-width: 30%;
+    align-content: center;
+}
