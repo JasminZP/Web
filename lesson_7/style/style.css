@@ -1,0 +1,53 @@
+* {
+    background-color: #C9A5AA;
+    width: 1200px;
+}
+main {
+    margin: 64px 184px auto 216px;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+main * {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+div {
+    margin: 0 auto;
+}
+nav {
+    margin: 64px 184px auto 216px;
+    background-color: #F4D3D3;
+    width: 1300px;
+    height: auto;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-block;
+}
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+}
+header {
+    background-color: #E9E9E9;
+    border-radius: 8px;
+    height: 30px;
+}
+header span {
+    background-color: #E9E9E9;
+    margin-left: 16px;
+    text-align: center;
+}
+img {
+    padding: 30px;
+    margin: auto;
+    width: 95%;
+    background-color: #F4D3D3;
+}
+figcaption {
+    text-align: center;
+    font-style: italic;
+}
+.Pavlo:nth-child(even) {
+    background-color: #FCE9E9;
+}
