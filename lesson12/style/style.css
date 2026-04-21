@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: Inter Helvetica, sans-serif;
+    background: #f3f3f3;
+    color: black;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    padding: 30px 5%;
+    align-items: center;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    column-gap: 350px;
+    background: rgba(243, 243, 243, 0.54);
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo span {
+    color: #085bb3;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+nav ul li a {
+    color: black;
+}
+.preview-box {
+    position: relative;
+    width: 100%;
+}
+.preview-box img {
+    width: 100%;
+}
+.status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #7ab6b6;
+}
+.online {
+    background: #4d1777;
+}
+.offline {
+    background: #e74c3c;
+}
+.info-alert {
+    position: relative;
+    top: -15px;
+    background: rgba(77, 39, 232, 0.55);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(29, 9, 106, 0.55);
+}
+.btn-adit {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #bccd26;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2), 2px 2px 8px 0 rgba(108, 25, 25, 0.14), 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.card-grid {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 40px;
+}
+.webcard {
+    background: #e74c3c;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2), 2px 2px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.card-info {
+    padding: 10px;
+}
