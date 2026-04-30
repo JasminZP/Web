@@ -1,3 +1,4 @@
+/* --- Глобальні стилі --- */
 * {
     margin: 0;
     padding: 0;
@@ -5,144 +6,303 @@
     text-decoration: none;
     list-style: none;
 }
+
 html {
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
+
 body {
     background: #0F172a;
     color: white;
+    line-height: 1.6;
 }
+
 .wrapper {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 0 20px; /* Внутрішні відступи для мобільних пристроїв */
 }
+
+/* --- Header --- */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10000000;
-    background: rgba(15, 23, 42, 0.86);
-    border-bottom: 1px solid #494848;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px); /* Ефект матового скла */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #334966;
 }
+
 .header-content {
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
+
 .logo span {
     color: #307ef6;
 }
+
 .menu {
     display: flex;
     align-items: center;
     gap: 10px;
     color: #cad5e3;
     font-size: 1rem;
+    cursor: pointer;
 }
+
 .menu-icon {
     font-size: 1.5rem;
 }
+
+/* --- Hero Section --- */
 .hero-section {
-    padding: 120px 0 120px 0;
+    padding: 160px 0 100px 0;
 }
+
 .hero-content {
     position: relative;
 }
+
 .hero-content h1 {
-    font-size: 3.75rem;
-    line-height: 1;
+    font-size: clamp(2.5rem, 8vw, 3.75rem); /* Адаптивний розмір заголовка */
+    line-height: 1.1;
     color: #307ef6;
     margin-bottom: 20px;
 }
+
 .hero-content p {
     color: #cad5e3;
     font-size: 1.2rem;
-    line-height: 1.4;
     max-width: 650px;
 }
+
 .code-icon {
     position: absolute;
-    top: 40px;
+    top: 0;
     right: 20px;
-    font-size: 5rem;
-    font-weight: 700;
-    color: #123442;
+    font-size: 6rem;
+    font-weight: 800;
+    color: rgba(48, 126, 246, 0.05); /* Ледь помітний фон */
+    z-index: -1;
 }
+
+/* --- Секції загальне --- */
 .career-section, .benefits-section, .roadmap-section {
     padding: 60px 0;
 }
+
 .section-title {
     position: sticky;
-    top: 60px;
-    z-index: 20;
+    top: 70px;
+    z-index: 100;
     font-size: 2rem;
-    line-height: 1.2;
-    padding: 25px 0 15px 0;
+    background: #0F172a;
+    padding: 20px 0;
     border-bottom: 1px solid #22304a;
     margin-bottom: 30px;
 }
+
+/* --- Career Cards (Grid) --- */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 .career-card {
     position: relative;
     overflow: hidden;
-    min-height: 235px;
-    padding: 22px 25px;
+    padding: 30px;
     background: #1d2a3d;
     border: 1px solid #334966;
-    border-radius: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s ease;
 }
-.career-card:before {
+
+.career-card:hover {
+    transform: translateY(-5px);
+    border-color: #307ef6;
+    box-shadow: 0 10px 30px rgba(47, 129, 249, 0.15);
+}
+
+.career-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top right, rgba(47, 129, 247, 0.23), transparent 60%);
+    background: radial-gradient(circle at top right, rgba(47, 129, 247, 0.15), transparent 70%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-.career-card:hover:before {
+
+.career-card:hover::before {
     opacity: 1;
 }
-.career-card:hover {
-    transform: translateY(-5px);
-    border-color: #334966;
-    box-shadow: 0 10px 35px rgba(47, 129, 249, 0.25);
-}
-.career-card > * {
-    position: relative;
-    z-index: 2;
-}
+
 .badge {
     display: inline-block;
+    align-self: flex-start;
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 5px 15px;
-    border-radius: 10px;
+    padding: 4px 12px;
+    border-radius: 20px;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
-.badge-red {
-    background-color: #f44336;
-}
-.badge-green {
-    background-color: #00c94f;
-}
-.badge-blue {
-    background-color: #2b7efe;
-}
+
+.badge-red { background-color: #f44336; }
+.badge-green { background-color: #00c94f; }
+.badge-blue { background-color: #2b7efe; }
+
 .career-card h3 {
     font-size: 1.5rem;
-    line-height: 1.3;
     margin-bottom: 10px;
 }
+
 .career-card p {
-    color: #334966;
+    color: #cad5e3;
     font-size: 1rem;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(48, 126, 246, 0.3);
+    border-radius: 6px;
+    color: #50bfff;
+    background: rgba(48, 126, 246, 0.05);
+}
+
+/* --- Benefits --- */
+.benefits-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.benefit-card {
+    padding: 30px;
+    background: #141f33;
+    border: 1px solid #334966;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: #1c315f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* --- Roadmap --- */
+.roadmap-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.roadmap-card {
+    position: relative;
+    padding: 25px 30px;
+    background: #1d2a3d;
+    border: 1px solid #334966;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+.roadmap-circle {
+    position: absolute;
+    left: -25px;
+    top: 35px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #3d74d9;
+    border: 3px solid #0f172b;
+    box-shadow: 0 0 0 2px #3d74d9;
+}
+
+.roadmap-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.roadmap-head h3 { font-size: 1.2rem; }
+.roadmap-head span { color: #cad5e3; font-size: 0.8rem; opacity: 0.8; }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid #334966;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+footer p { color: #cad5e3; font-size: 0.9rem; }
+
+/* --- Floating Button --- */
+.chat-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2b7efe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 1000;
+}
+
+.chat-button:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: #1e56ae;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    .hero-section { padding: 120px 0 60px 0; }
+    .code-icon { display: none; }
+    .section-title { font-size: 1.6rem; }
+    .roadmap-card { margin-left: 20px; padding: 20px; }
 }
