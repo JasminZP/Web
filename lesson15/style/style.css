@@ -1,0 +1,52 @@
+body {
+    background: #F4F9FF;
+}
+.wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+}
+label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    color: #4446F8;
+    font-size: 50px;
+    font-weight: 530;
+}
+header p {
+    color: grey;
+}
+.forforms {
+    display: flex;
+    flex-direction: column;
+}
+.forforms form {
+    background: #EEF3FF;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.forforms form h2 {
+    color: #1C398E;
+}
+.forforms form input {
+    width: 350px;
+    height: 45px;
+    border: 1px solid lightgray;
+    border-left: 3px solid #3B82F6;
+    border-radius: 10px;
+}

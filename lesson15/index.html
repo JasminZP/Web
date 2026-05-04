@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="normalizer/normalizer.css" rel="stylesheet">
+    <link href = "style/style.css" rel = "stylesheet">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class = "wrapper">
+    <header>
+        <h1>Форма прийому на роботу</h1>
+        <p>ІТ Компанія "TechInnovate"</p>
+        <p>Поля позначені синьою лінією є обов'язковими для заповнення</p>
+    </header>
+    <main>
+        <div class = "forforms">
+            <form class = "form1">
+                <h2>Персональні дані</h2>
+                <label>
+                    <div class = "wrap">
+                        <span>Ім'я *<br></span>
+                        <input type = "text" name = "ima" placeholder=" Введіть ваше ім'я" required>
+                    </div>
+                    <div class = "wrap">
+                        Прізвище *<br>
+                        <input type = "text" name = "prizvishe" placeholder = " Введіть ваше прізвище" required>
+                    </div>
+                </label>
+                <label>
+                    <div class = "wrap">
+                        Email *<br>
+                        <input type = "text" name = "email" placeholder="   example@email.com" required>
+                    </div>
+                    <div class = "wrap">
+                        Телефон *<br>
+                        <input type = "text" name = "telephone" placeholder = " +380 XX XXX XX XX" required>
+                    </div>
+                </label>
+            </form>
+            <form class = "form2">
+                <h2>Професійна інформація</h2>
+                <label>
+                    Бажана позиція *<br>
+                    <select name = "poz" required>
+                        <option value = "obpoz">Оберіть позицію</option>
+                        <option value = "front">Frontend developer</option>
+                        <option value = "back">Backend developer</option>
+                        <option value = "full">Full Stack Developer</option>
+                        <option value = "dev">DevOps Engineer</option>
+                        <option value = "qa">QA Engineer</option>
+                        <option value = "ui">UI/UX designer</option>
+                        <option value = "mob">Mobile Developer</option>
+                        <option value = "data">Data Scientist</option>
+                    </select>
+                </label>
+                <label>
+                    Досвід роботи (років) *<br>
+                    <input type = "number" min = "0" max = "50" placeholder="0-50" required>
+                </label>
+                <label>
+                    Технології та навичка *<br>
+                    <input type = "text" placeholder="React, TypeScript, Node.js, Python..." required>
+                </label>
+            </form>
+            <form class = "form3">
+                <h2>Додаткова інформація</h2>
+                <label>
+                    GitHub профіль *<br>
+                    <input type = "text" placeholder="https://github.com/username" required>
+                </label>
+                <label>
+                    Портфоліо *<br>
+                    <input type = "text" placeholder="https://yourportfolio.com" required>
+                </label>
+                <label>
+                    Резюме (PDF, DOC) *
+                </label>
+                <label>
+                    Коротко про себе *<br>
+                    <textarea name = "aboutyou" placeholder = "Розкажіть про свій досвід, мотивацію та чому ви хочете приєднатися до нашої команди... (мінімум 50 символів)"></textarea>
+                </label>
+            </form>
+        </div>
+        <label>
+            <input type = "checkbox" name = "zgoda" value = "1" required> Я даю згоду на обробку персональних даних та підтверджую, що вся надана інформація є достовірною *
+        </label>
+        <button type = "submit">Надіслати заявку</button>
+    </main>
+    <footer>
+        <h3>💡 Підказки по заповненню:</h3>
+        <p>✓ Зелена рамка — поле заповнено правильно</p>
+        <p>✗ Червона рамка — поле заповнено неправильно</p>
+        <p>→ Синя лінія зліва — обов'язкове поле</p>
+        <p>↗ Наведіть курсор на поле для ефекту підсвічування</p>
+    </footer>
+</div>
+</body>
+</html>
