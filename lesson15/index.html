@@ -41,24 +41,26 @@
             <form class = "form2">
                 <h2>Професійна інформація</h2>
                 <label>
-                    Бажана позиція *<br>
-                    <select name = "poz" required>
-                        <option value = "obpoz">Оберіть позицію</option>
-                        <option value = "front">Frontend developer</option>
-                        <option value = "back">Backend developer</option>
-                        <option value = "full">Full Stack Developer</option>
-                        <option value = "dev">DevOps Engineer</option>
-                        <option value = "qa">QA Engineer</option>
-                        <option value = "ui">UI/UX designer</option>
-                        <option value = "mob">Mobile Developer</option>
-                        <option value = "data">Data Scientist</option>
-                    </select>
+                    <div class = wrap>
+                        Бажана позиція *<br>
+                        <select name = "poz" required class = "select">
+                            <option value = "obpoz">Оберіть позицію</option>
+                            <option value = "front">Frontend developer</option>
+                            <option value = "back">Backend developer</option>
+                            <option value = "full">Full Stack Developer</option>
+                            <option value = "dev">DevOps Engineer</option>
+                            <option value = "qa">QA Engineer</option>
+                            <option value = "ui">UI/UX designer</option>
+                            <option value = "mob">Mobile Developer</option>
+                            <option value = "data">Data Scientist</option>
+                        </select>
+                    </div>
+                    <div class = "wrap">
+                        Досвід роботи (років) *<br>
+                        <input type = "number" min = "0" max = "50" placeholder="0-50" required>
+                    </div>
                 </label>
-                <label>
-                    Досвід роботи (років) *<br>
-                    <input type = "number" min = "0" max = "50" placeholder="0-50" required>
-                </label>
-                <label>
+                <label class = "tech">
                     Технології та навичка *<br>
                     <input type = "text" placeholder="React, TypeScript, Node.js, Python..." required>
                 </label>
@@ -66,26 +68,31 @@
             <form class = "form3">
                 <h2>Додаткова інформація</h2>
                 <label>
-                    GitHub профіль *<br>
-                    <input type = "text" placeholder="https://github.com/username" required>
+                    <div class = "wrap">
+                        GitHub профіль *<br>
+                        <input type = "text" placeholder="https://github.com/username" required>
+                    </div>
+                    <div class = "wrap">
+                        Портфоліо *<br>
+                        <input type = "text" placeholder="https://yourportfolio.com" required>
+                    </div>
                 </label>
-                <label>
-                    Портфоліо *<br>
-                    <input type = "text" placeholder="https://yourportfolio.com" required>
-                </label>
-                <label>
+                <label class = "tech2">
                     Резюме (PDF, DOC) *
+                    <input type = "file" placeholder = "Вибрати файл\Файл не вибрано" required>
                 </label>
-                <label>
+                <label class = "tech">
                     Коротко про себе *<br>
-                    <textarea name = "aboutyou" placeholder = "Розкажіть про свій досвід, мотивацію та чому ви хочете приєднатися до нашої команди... (мінімум 50 символів)"></textarea>
+                    <textarea rows = "10" cols = "20" name = "aboutyou" placeholder = "Розкажіть про свій досвід, мотивацію та чому ви хочете приєднатися до нашої команди... (мінімум 50 символів)"></textarea>
                 </label>
             </form>
         </div>
-        <label>
+        <label class = "zgoda">
             <input type = "checkbox" name = "zgoda" value = "1" required> Я даю згоду на обробку персональних даних та підтверджую, що вся надана інформація є достовірною *
         </label>
-        <button type = "submit">Надіслати заявку</button>
+        <div class = "boxforbutton">
+            <button type = "submit">Надіслати заявку</button>
+        </div>
     </main>
     <footer>
         <h3>💡 Підказки по заповненню:</h3>
